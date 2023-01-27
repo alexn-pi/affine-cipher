@@ -1,0 +1,15 @@
+The process of cracking an Affine Cipher involves trying all possible values of a and b until the correct one is found. This is known as a brute force attack.
+
+Here's an example of how to crack a ciphertext in C:
+
+Create a function to decrypt the ciphertext using a given value of a and b. This function should use the same encryption formula as above, but with the opposite operation (i.e. m = (Enc(m) - b) * a^-1 mod n).
+
+Create a loop that iterates through all possible values of a and b. For each iteration, use the decryption function to decrypt the ciphertext and check if the resulting plaintext is a valid English word or phrase.
+
+Once a valid plaintext is found, print it to the console and stop the loop.
+
+A flow diagram for cracking the ciphertext program should be provided as well (functional design) where it contains a diagram of the functions you have implemented.
+
+It's important to note that this method is time-consuming and computationally expensive as it requires trying all possible values of a and b, which is a total of 26*25 = 650 possibilities, and also using a dictionary of english words or phrases to check the validity of the decrypted plaintext.
+
+Additionally, it's important to note that in real-world scenarios, the encryption keys (a and b) are usually kept secret and not easily guessed, so this method is not always practical for cracking encryption keys.
