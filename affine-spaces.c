@@ -7,7 +7,7 @@
 void encrypt(int a, int b, char message[])
 {
     int i, x;
-    for (i = 0; i < strlen(message); i++)
+    for (i = 0; i < (int)strlen(message); i++)
     {
         // Convert each character to uppercase and convert it to a number between 0-25
         x = (toupper(message[i]) - 'A') % 26;
@@ -21,7 +21,7 @@ void encrypt(int a, int b, char message[])
 void decrypt(int a, int b, char message[])
 {
     int i, x, a_inv;
-    for (i = 0; i < strlen(message); i++)
+    for (i = 0; i < (int)strlen(message); i++)
     {
         // Convert each character to uppercase and convert it to a number between 0-25
         message[i] = toupper(message[i]) - 'A';
@@ -36,7 +36,7 @@ void decrypt(int a, int b, char message[])
             break;
         }
     }
-    for (i = 0; i < strlen(message); i++)
+    for (i = 0; i < (int)strlen(message); i++)
     {
         x = (a_inv * (message[i] - b + 26)) % 26;
         // Convert the number back to a character
